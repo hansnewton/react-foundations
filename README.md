@@ -10,6 +10,9 @@ Sendo a UI algo que o usuário vê e interage.
 Sendo biblioteca um conjunto de funções (APIs) que podem ser utilizadas pelo desenvolvedor no momento oportuno. 
 Image de componente: https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Flearn-react-components.png&w=1920&q=75&dpl=dpl_42Sgxb1DrR4FHfR27frojTCdKMQA
 
+O que você é capaz de fazer com React ?
+Ele pode ser usado para desenvolver aplicacoes SPA, moveis ou server-rendered com frameworks como Next.js.
+
 Construir componentes no React leva tempo.
 
 o Next.js é um framework em React que te disponibiliza blocos de código que auxilia construção de aplicações web.
@@ -426,3 +429,8 @@ export default function HomePage() {
   );
 }
 ```
+
+# Proximos passos
+
+Utilizar algum framework: Next.js, Remix, Gatsby, Expo
+Outras linguagens
