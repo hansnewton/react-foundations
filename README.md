@@ -130,11 +130,19 @@ Regras do JSX: https://react.dev/learn/writing-markup-with-jsx#the-rules-of-jsx
 2. Close all the tags 
 3. camelCase all most of the things!
 
-Navegadores não entendem JSX, é necessário um Compilador JavaScript, como o babel para transformar JSX em javascript
+O JSX possibilita que você coloque tecnologia e lógica de negócio em seu componente sem precisar de outro arquivo implementando o principio de design Separação de interesse (SoC - separation of concerns) com partes fracamente acopladas chamadas de componentes que contém as duas (tech e logica). Separação de interesse significa reduzir acoplamento e aumentar a coesão.
+
+Jsx previne de ataques de injeções. Os valores dos inputs são escapados e tudo é transformado em string antes de ser renderizado previnindo de ataques XSS (cross-site scripting)
+
+Navegadores não entendem JSX, é necessário um Compilador JavaScript, como o [babel](https://babeljs.io/docs/editors) para transformar JSX em javascript e suportar o Ecmascript 2015+ highlight 
 ```
 <script type="text/jsx">
 </script>    
 ```
+
+Video sobre React: https://www.youtube.com/watch?v=x7cQ3mrcKaY&ab_channel=JSConf
+
+https://marcobaccaro.wordpress.com/2013/06/19/separation-of-concerns/#:~:text=O%20princ%C3%ADpio%20da%20separa%C3%A7%C3%A3o%20de,atrav%C3%A9s%20de%20limites%20bem%20estabelecidos.
 
 ## Javascript Essencial para React
 
@@ -152,6 +160,10 @@ export function draw
 export { name, draw, reportArea, reportPerimeter };
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
+
+Ecmascript: especificação do javascript
+Hoje em dia há uma confusao se javascript e ecma sao a mesma coisa.
+https://www.w3schools.com/js/js_es6.asp
 
 ## Construindo UI com Componentes
 https://nextjs.org/learn/react-foundations/building-ui-with-components
@@ -432,5 +444,14 @@ export default function HomePage() {
 
 # Proximos passos
 
-Utilizar algum framework: Next.js, Remix, Gatsby, Expo
-Outras linguagens
+Utilizar algum framework: Next.js, Remix, Gatsby, Expo, Rx, Astro
+Outras linguagens: Angular, Vue.js, Svelte
+
+O `create-react-app` (CRA) está entrando em desuso e o próprio site oficial do react já está recomendando iniciar com algum framework como next.js.
+
+Outra alternativa ao CRA é o Vite. create-vite is a tool to quickly start a project from a basic template for popular frameworks.
+
+Speedy Web Compiler - SWC https://swc.rs/. Bundler para fazer builds muito rápido.
+
+É interessante começar com typescript (Jeito da microsoft de adicionar tipagem concreta ao javascript, necessitando de um compilador) e JSX (extende a sintaxe do javascript possibilitando codigo parecido com html, necessitando de um compilador).
+No final das contas tudo é transformado em javascript regular e html.
